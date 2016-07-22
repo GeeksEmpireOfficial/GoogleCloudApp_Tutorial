@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      tools:context="net.geekstools.floatshort.MainScope" >
+
+    <item
+        android:id="@+id/storage"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Firebase.Storage"/>
+
+    <item
+        android:id="@+id/notification"
+        android:orderInCategory="101"
+        android:showAsAction="never"
+        android:title="Firebase.Notification"/>
+
+    <item
+        android:id="@+id/remoteconfig"
+        android:orderInCategory="102"
+        android:showAsAction="never"
+        android:title="Firebase.RemoteConfig"/>
+
+    <item
+        android:id="@+id/backupapi"
+        android:orderInCategory="103"
+        android:showAsAction="never"
+        android:title="Backup API"/>
+
+    <item
+        android:id="@+id/invite"
+        android:orderInCategory="104"
+        android:showAsAction="never"
+        android:title="Invite"/>
+
+    <item
+        android:id="@+id/dynamic"
+        android:orderInCategory="105"
+        android:showAsAction="never"
+        android:title="DynamicDeep"/>
+
+</menu>

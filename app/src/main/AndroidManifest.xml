@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="test.geekstools.cloud">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <!-- backupAgent >> System Automatically Detect & Use it to Handle backup of app -->
+    <application
+        android:allowBackup="true"
+        android:backupAgent=".BackupAPI"
+        android:largeHeap="true"
+        android:fullBackupContent="@xml/backup_agent"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.backup.api_key"
+            android:value="AEdPqrEAAAAIN1qkBYFnU7qb1SZRRLTIWYR7dpc1UmNqOw0WJA"/>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="ec3d096cb61383a1c67769cfa9b37b4ce74e0c34"/>
+
+        <activity
+            android:name=".DeepActivity"
+            android:label="@string/app_name">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
+                <data android:scheme="http"
+                    android:host="geeksempire.net"
+                    android:pathPrefix="/tools"/>
+                <!-- note that the leading "/" is required for pathPrefix -->
+                <!-- Accepts URIs that begin with "example://gizmos” -->
+                <!-- adb shell am start -W -a android.intent.action.VIEW -d "http://geeksempire.net/tools" test.geekstools.cloud -->
+            </intent-filter>
+        </activity>
+        <activity android:name=".StorageFirebase">
+        </activity>
+        <activity android:name=".NotificationFirebase">
+            <intent-filter>
+                <action android:name="NotificationFirebaseAction"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".CustomCloud">
+        </activity>
+        <activity android:name=".RemoteConfigFirebase">
+        </activity>
+
+        <service android:name=".NotificationFirebaseService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity android:name=".DynamicActivity">
+            <!--<intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="geeksempire.net"
+                    android:pathPrefix="/tools"
+                    android:scheme="http"/>
+                <data
+                    android:host="geeksempire.net"
+                    android:pathPrefix="/tools"
+                    android:scheme="https"/>
+
+            </intent-filter>-->
+        </activity>
+    </application>
+
+</manifest>

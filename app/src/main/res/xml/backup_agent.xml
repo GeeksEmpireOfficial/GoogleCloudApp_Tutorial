@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <include domain="sharedpref" path="pref_setting.xml"/>
+</full-backup-content>
+
+<!--
+<full-backup-content>
+    <include domain=["file" | "database" | "sharedpref" | "external" | "root"]
+    path="string" />
+    <exclude domain=["file" | "database" | "sharedpref" | "external" | "root"]
+    path="string" />
+</full-backup-content>
+-->

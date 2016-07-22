@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">CloudAppTest</string>
+
+    <string name="email">E-Mail</string>
+    <string name="password">Password</string>
+    <string name="login">Login OR SignUp</string>
+    <string name="gplus">Google</string>
+    <string name="twitter">Twitter</string>
+
+    <string name="twitter_consumer_key">rNN8ULGDzXpxGBKjs2FjemRce</string>
+    <string name="twitter_consumer_secret">NW9wiWbhDb04NrUOlZ2Dvb1IHBPqt7u5k6hFQlO9uUGlyQCwIV
+    </string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+    <string name="app_code">cpx5t</string>
+
+</resources>

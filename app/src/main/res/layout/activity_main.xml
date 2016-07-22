@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="test.geekstools.cloud.MainActivity"
+                android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/clientData"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:hint="@string/app_name"
+        android:textSize="19sp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"/>
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="50dp"
+        android:layout_height="90dp"
+        android:layout_alignEnd="@id/clientData"
+        android:layout_alignBottom="@id/clientData"
+        android:padding="5dp"
+        android:background="@android:drawable/ic_menu_upload"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/clientData"
+        android:gravity="center"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textSize="19sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/email"
+        android:gravity="center"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textSize="19sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/password"
+        android:text="@string/login"/>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/gplus"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/login"
+        android:layout_alignParentStart="true"
+        android:text="@string/gplus"
+        android:background="@android:color/holo_red_dark"/>
+
+    <com.twitter.sdk.android.core.identity.TwitterLoginButton
+        android:id="@+id/twitter"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/login"
+        android:layout_alignParentEnd="true"
+        android:text="@string/twitter"
+        android:background="@android:color/holo_blue_dark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:baselineAligned="false"
+        android:layout_below="@id/twitter">
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:listSelector="@android:drawable/list_selector_background"/>
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>
